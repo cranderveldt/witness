@@ -1,0 +1,62 @@
+body {
+  background: #f1f1f1;
+}
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  background: white;
+  padding: 45px;
+}
+
+.grid {
+  background: transparent url("/images/panel.jpg") left top repeat;
+  height: 900px;
+}
+
+.icon-button {
+  color: #333;
+  background: transparent;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  @include round(4px);
+  i {
+    @include font-size(41, 1);
+
+  }
+}
+.shapes {
+  position: relative;
+}
+.shape {
+  width: 100px;
+  height: 100px;
+  padding: 10px 0 0 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  .inner {
+    width: 90px;
+    height: 90px;
+    background: rgba(#8a9aa8, .75);
+  }
+}
+
+.points {
+  @include flex-row-at(0);
+  @include flex-wrap;
+}
+
+.point {
+  width: 100px;
+  height: 100px;
+  border-top: 10px solid #dadada;
+  border-left: 10px solid #dadada;
+  &.north-active {
+    border-top: 10px solid red;
+  }
+  &.west-active {
+    border-left: 10px solid red;
+  }
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" ng-app="witness">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>The Witness Buddy</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/angular.js"></script>
+  <script src="js/script.js"></script>
+</head>
+<body ng-controller="Main">
+  <div class="container">
+    <div class="actions">
+      <button type="button" class="icon-button" ng-click="addShape()"><i class="material-icons">add_box</i></button>
+    </div>
+    <div class="grid">
+      <div class="shapes">
+        <div class="shape" ng-repeat="shape in shapes" wit-shape="shape">
+          <div class="inner"></div>
+        </div>
+      </div>
+      <div class="points">
+        <div class="point" ng-class="getPointClasses(point)" ng-repeat="point in points" wit-point="point" wit-callback="digestPoint"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
