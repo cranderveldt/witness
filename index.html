@@ -12,15 +12,7 @@
 </head>
 <body ng-controller="Main">
   <div class="container">
-    <div class="actions">
-      <button type="button" class="icon-button" ng-click="addShape()"><i class="material-icons">add_box</i></button>
-    </div>
     <div class="grid">
-      <div class="shapes">
-        <div class="shape" ng-repeat="shape in shapes" wit-shape="shape">
-          <div class="inner"></div>
-        </div>
-      </div>
       <div class="points">
         <div class="point" ng-class="getPointClasses(point)" ng-repeat="point in points" wit-point="point" wit-callback="digestPoint"></div>
       </div>

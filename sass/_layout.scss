@@ -53,10 +53,14 @@ body {
   height: 100px;
   border-top: 10px solid #dadada;
   border-left: 10px solid #dadada;
+  cursor: pointer;
   &.north-active {
     border-top: 10px solid red;
   }
   &.west-active {
     border-left: 10px solid red;
+  }
+  &.main-active {
+    background: #8a9aa8;
   }
 }
